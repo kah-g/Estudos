@@ -52,5 +52,5 @@ print "Erro: informcao entrada e invalida.\n";
 
 #Testando o operador criador de lista
 @array2 = qw (oi oi oi tchau);
-$" = ', '; #afeta todos os prints similares subsquentes
+$" = ', '; #afeta todos os prints similares subsquentes que estiverem no mesmo formato
 print "@array2\n";
