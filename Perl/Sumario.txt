@@ -1,0 +1,11 @@
+Nome do Script - Funcionalidade
+Teste.pl - Teste da função print e operacoes com numeros
+Teste2.pl - Teste de operadores relacionais e operadores sobre strings
+Teste3.pl -Exer2.pl - Exercicios do capitulo 2 do livro de Perl (Deitel) Teste de estruturas de repetição com pré e pós incremento e decremento
+Teste4.pl - Teste de operador de intervalo, print de array, função defined, scalar, $# e o operador criador de lista
+Teste5.pl - Teste de função de arrays e de lista
+Teste6.pl - Teste de pesquisa linear e binária em array e funções de tabela hash
+Teste7.pl - Teste da estrutura foreach
+Exer2.pl - Exercicios do capitulo 2 do livro de Perl (Deitel)
+Exer3.pl - Exercicios do capitulo 3 do livro de Perl (Deitel)
+Exer4.pl - Exercicios do capitulo 4 do livro de Perl (Deitel)

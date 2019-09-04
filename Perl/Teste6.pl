@@ -55,7 +55,7 @@ else {
 	print "A pesquisa binaria nao encontrou $number no array. Numero de iteracoes: $it2\n";
 }
 
-#Tabelas hash e suas funcoes (keys, values, reverse, each)
+#Tabelas hash e suas funcoes (keys, values, reverse, each, delete, exists, defined)
 %hash = (one => 1, two => 2, three => 3); #criando e preenchendo uma tabela hash
 print "$hash{one}.\n"; #procurando e printando um elemento da hash
 $hash{four} = 4; #adicionando um novo elemento a hash
@@ -70,8 +70,25 @@ print "\nTabela hash original:\n";
 while (($chaves2, $valores2) = each (%hash)) {
 	print "chave: $chaves2 - valor: $valores2\n";
 }
-
 print "\nTabela hash revertida:\n";
-while (($chaves2, $valores2) = each (%hash2)) {
-	print "chave: $chaves2 - valor: $valores2\n";
+while (($chaves3, $valores3) = each (%hash2)) {
+	print "chave: $chaves3 - valor: $valores3\n";
+}
+delete ($hash{'two'});
+print "\nTabela hash apos exclusao de item:\n";
+while (($chaves4, $valores4) = each (%hash)) {
+	print "chave: $chaves4 - valor: $valores4\n";
+}
+if (exists ($hash{'two'})) {
+	print "\ntwo existe na tabela hash\n";
+}
+else {
+	print "\ntwo nao existe na tabela hash";
+}
+$hash{five};
+if (defined ($hash {five})) {
+	print "\nfive esta deifinido na tabela hash como $hash{five}\n";
+}
+else {
+	print "\nfive nao esta definido na tabela hash\n";
 }

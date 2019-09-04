@@ -33,7 +33,7 @@ until ($nomes eq "fim") {
 print "@listan\n";
 print "Tamanho do array: ", scalar (@listan), "\n";
 
-#Testando a funcao #$
+#Testando a funcao $#
 print "Entre com o tamanho do array, deve ser um numero maior ou igual a zero\n";
 chomp ($tamanho = <STDIN>);
 if ($tamanho >= 0) {

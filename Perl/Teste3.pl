@@ -1,6 +1,7 @@
 #!c:\perl\64\bin\perl.exe
-#testando estruturas de repetição com pre e pos incrementacaoo e decrementacao
+#testes - continuacao
 
+#testando estruturas de repetição com pre e pos incrementacaoo e decrementacao
 print "do-while com pre incremento\n";
 $counter1 = 1;
 do { 

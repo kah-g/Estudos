@@ -31,7 +31,7 @@ print "@array2\n";
 print "Array 3: ";
 print "@array3\n";
 @removidos = splice (@array2, 9, scalar (@array3), @array3);
-#explicando o splice, removidos e onde vao ser armazenados os elementos substituidos pelo splice
+#explicando o splice, removidos eh onde vao ser armazenados os elementos substituidos pelo splice
 #o primeiro argumento e o array a ser modificado, o segundoa argumento e o indice do primeiro elemento a ser modificado
 #o terceiro argumento e o tamanho da parte do array a ser modificada
 #o quarto argumento e o array e uma lista para substituir a parte especificada do array
