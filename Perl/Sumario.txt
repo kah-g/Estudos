@@ -5,7 +5,7 @@ Teste3.pl -Exer2.pl - Exercicios do capitulo 2 do livro de Perl (Deitel) Teste d
 Teste4.pl - Teste de operador de intervalo, print de array, função defined, scalar, $# e o operador criador de lista
 Teste5.pl - Teste de função de arrays e de lista
 Teste6.pl - Teste de pesquisa linear e binária em array e funções de tabela hash
-Teste7.pl - Teste da estrutura foreach
+Teste7.pl - Teste da estrutura foreach, função grep e map
 Exer2.pl - Exercicios do capitulo 2 do livro de Perl (Deitel)
 Exer3.pl - Exercicios do capitulo 3 do livro de Perl (Deitel)
 Exer4.pl - Exercicios do capitulo 4 do livro de Perl (Deitel)
