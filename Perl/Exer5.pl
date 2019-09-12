@@ -49,7 +49,7 @@ for ($lado1 = 1; $lado1 < 500; $lado1++) {
 	for ($lado2 = 1; $lado2 < 500; $lado2++) {
 		for ($hipotenusa = 1; $hipotenusa < 500; $hipotenusa++) {
 			if ($lado1**2 + $lado2**2 == $hipotenusa**2) {
-				#print "$lado1, $lado2 e $hipotenusa sao triplas de pitagoras.\n";
+				print "$lado1, $lado2 e $hipotenusa sao triplas de pitagoras.\n";
 				$total2++;
 			}
 		}
@@ -69,10 +69,16 @@ foreach (1..10) {
 	print "$parte1 $parte2 $parte3 $parte4\n";
 }
 
-#problema 5.9 - terminar
+#problema 5.9
 print "Vamos preencher um array de 10 elementos.\n";
 @array2[10];
 foreach (0..9) {
 	print "Entre com o elemento ", $_ +1, " de 10: ";
 	chomp ($array2[$_] = <STDIN>);
+	if ($array2[$_]** 2 >= 100 && $array2[$_]** 2 <= 200) {
+		print "O elemento $array2[$_] se encaixa nos requisitos.\n";
+	}
 }
+@array3 = map ($_ ** 2, @array2);
+@array4 = grep ($_>= 100 && $_<= 200, @array3);
+print "@array4\n";
