@@ -42,3 +42,16 @@ sub calc_circ {
 		return $area;
 	}
 }
+
+#testar a partir daqui
+#problema 6.6
+print "Vamos comecar a jogar dados.\n";
+$vezes = 3;
+&joga_dado ($vezes);
+
+sub joga_dado {
+	for ($i = 0; $i < $vezes; $i++) {
+		$dado = (int (rand(5))) ++;
+		print "Jogada: ", $i ++, ", Resultado: $dado.\n";
+	}
+}
