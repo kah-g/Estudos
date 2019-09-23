@@ -46,12 +46,12 @@ sub calc_circ {
 #testar a partir daqui
 #problema 6.6
 print "Vamos comecar a jogar dados.\n";
-$vezes = 3;
+$vezes = 6000;
 &joga_dado ($vezes);
 
 sub joga_dado {
 	for ($i = 0; $i < $vezes; $i++) {
-		$dado = (int (rand(5))) ++;
-		print "Jogada: ", $i ++, ", Resultado: $dado.\n";
+		$dado = (int (rand(6))) + 1;
+		print "Jogada: ", $i + 1, ", Resultado: $dado.\n";
 	}
 }
