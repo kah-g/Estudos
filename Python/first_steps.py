@@ -117,5 +117,16 @@ def exer12 ():
     print ('Lista completa:')
     print (numeros_l)
 
+def exer13 ():
+    #tipo dicionario
+    #criando o dicionario
+    dados_aluno = {'nome': 'juma', 'matricula': '5550', 'idade' : '17'}
+    print ('o nome da aluna e ' + dados_aluno['nome'] + ' e tem ' + dados_aluno['idade'] + ' anos')
+    print ('entre o sobrenome da aluna ' + dados_aluno['nome'])
+    #adicionando elementos ao dicionario
+    novo_dado = str(input())
+    dados_aluno['sobrenome'] = novo_dado
+    print (dados_aluno)
+
 #chamando funcoes
-exer12 ()
+exer13 ()
