@@ -1,1 +1,1 @@
-# Estudos
+# Estudos independentes de programação
