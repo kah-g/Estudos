@@ -128,5 +128,14 @@ def exer13 ():
     dados_aluno['sobrenome'] = novo_dado
     print (dados_aluno)
 
+def exer14 ():
+    #testando a contagem de chars com dicionario
+    message = 'It was a bright cold day in April, and the clocks were striking thirteen.'
+    contador = {}
+    for character in message:
+        contador.setdefault(character, 0)
+        contador[character] = contador[character] + 1
+    print (contador)
+
 #chamando funcoes
-exer13 ()
+exer14 ()
