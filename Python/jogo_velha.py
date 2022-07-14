@@ -55,7 +55,6 @@ def escolhe_espaco (espacos_vazios):
     max = 0
     for i in espacos_vazios.keys ():
         max += 1
-    print (max)
     print ('Digite o numero que corresponda ao espaco que vc quer preencher')
     while True:
         try:
@@ -70,9 +69,40 @@ def escolhe_espaco (espacos_vazios):
     return espacos_vazios[str(posicao)]
 
 def preenche_grid (grid, jogador):
+    #preenche a grid com o simbolo do jogador na posicao que ele escolher
     espacos_vazios = verifica_grid(grid)
     posicao = escolhe_espaco(espacos_vazios)
     grid[posicao] = jogador
+
+def verifica_win (grid, jogador):
+    #vai verificar se o jogo foi vencido
+    #para isso e necessario olhar cada possibilidade de vitoria, ou seja todas as linhas, colunas e diagonais
+    if grid['top_l'] == jogador:
+        #se o jogador que estamos verificando ja tiver ocupado essa posicao
+        #vou verificar todas as possibilidades de vitoria que ele pode ter a partir dessa primera posicao
+        if grid['top_l'] == grid['top_m'] and grid['top_l'] == grid['top_r']:
+            return True
+        elif grid['top_l'] == grid['mid_l'] and grid['top_l'] == grid['low_l']:
+            return True
+    elif grid['mid_m'] == jogador:
+        #nesse alem de verificar uma linha e uma coluna, vou verificar as duas diagonais
+        if grid['mid_m'] == grid['top_l'] and grid['mid_m'] == grid['low_r']:
+            return True
+        elif grid['mid_m'] == grid['top_r'] and grid['mid_m'] == grid['low_l']:
+            return True
+        elif grid['mid_m'] == grid['top_m'] and grid['mid_m'] == grid['low_m']:
+            return True
+        elif grid['mid_m'] == grid['mid_l'] and grid['mid_m'] == grid['mid_r']:
+            return True
+    elif grid['low_r'] == jogador:
+        #duas ultimas posicoes a serem verificadas
+        if grid['low_r'] == grid['mid_r'] and grid['low_r'] == grid['top_r']:
+            return True
+        elif grid['low_r'] == grid['low_m'] and grid['low_r'] == grid['low_l']:
+            return True
+    else:
+        #caso nenhuma das possibilidades acima for verdadeira, retorna falso, pois ainda nao foi preenchido
+        return False
 
 
 print ('Bem vindo ao jogo da velha')
@@ -84,7 +114,18 @@ for i in range (9):
         print ('Vez do Jogador X. Onde quer colocar sua peca?')
         preenche_grid (grid, 'X')
         printa_grid (grid)
+        win = verifica_win(grid, 'X')
+        if win == True:
+            print('Jogador X ganhou. Parabéns')
+            break
     else:
         print ('Vez do Jogador O. Onde quer colocar sua peca?')
         preenche_grid (grid, 'O')
         printa_grid (grid)
+        win = verifica_win(grid, 'O')
+        if win == True:
+            print('Jogador O ganhou. Parabéns')
+            break
+    if i == 8:
+        print ('Ninguem ganhou. Deu empate')
+print ('Fim de jogo. Bye')
