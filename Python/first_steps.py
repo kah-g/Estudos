@@ -138,4 +138,5 @@ def exer14 ():
     print (contador)
 
 #chamando funcoes
+#changes
 exer14 ()
