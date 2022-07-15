@@ -137,6 +137,11 @@ def exer14 ():
         contador[character] = contador[character] + 1
     print (contador)
 
+def exer15 ():
+    #printando a palavra como se estivesse gaguejando o inicio
+    print ('Entre com uma palavra')
+    palavra = input()
+    print (palavra[0] + palavra[1] + '...' + palavra)
+
 #chamando funcoes
-#changes
-exer14 ()
+exer15 ()
