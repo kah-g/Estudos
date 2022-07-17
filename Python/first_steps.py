@@ -143,5 +143,7 @@ def exer15 ():
     palavra = input()
     print (palavra[0] + palavra[1] + '...' + palavra)
 
+
 #chamando funcoes
+#change
 exer15 ()
