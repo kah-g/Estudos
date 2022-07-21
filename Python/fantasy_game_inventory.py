@@ -13,11 +13,14 @@ def printa_inventario (invt):
 
 def add_inventario (invt, lista_itens):
     #recebe o inventario e uma lista de itens para adicionar ao inventario
-    #set default verifica se aquele item existe no inventario, se nao exister, o item e criado e colocado o valor 1
-    #se set default retornar um valor maior que 1, significa que aquele item ja existe na lista, sendo necessario apenas somar mais 1 a quantidade do item
     for i in range (len(lista_itens)):
-         if (invt.setdefault(lista_itens[i], 1)) >= 1:
+        if (lista_itens[i] in invt.keys ()) == True:
+            #verifico se o item da lista ja esta no inventario
+            #se tiver, e somado mais 1 a key do item
             invt[lista_itens[i]] = invt[lista_itens[i]] + 1
+        else:
+            #se nao tiver o item, ele e adicionado no inventario com valor 1
+            invt[lista_itens[i]] = 1
 
 def gera_baus (itens_todos):
     #vou preencher 1 bau de acordo com 1 sorteio
