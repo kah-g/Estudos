@@ -143,7 +143,20 @@ def exer15 ():
     palavra = input()
     print (palavra[0] + palavra[1] + '...' + palavra)
 
+def exer16 ():
+    #printando com multiline string e com escape characters
+    print ('Primeiro: Multiline string')
+    print ('''S
+E
+N
+T
+A
+D
+O
+N
+A''')
+    print ('Segundo: Escape character')
+    print ("s \ne \nn \nt \na \nd \no \nn \na")
 
 #chamando funcoes
-#change
-exer15 ()
+exer16 ()
