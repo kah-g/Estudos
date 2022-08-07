@@ -2,6 +2,7 @@
 #e tentar adivinha essa senha verificando cada caractere
 
 def le_senha ():
+    #a funcao so aceita a senha se ela for do tamanho especificado e composta apenas por letras e numeros
     while True:
         senha = input ()
         if (senha.isalnum() == True and len(senha) == 4):
@@ -13,12 +14,16 @@ def le_senha ():
             continue
 
 def quebra_char (senha):
+    #para cada char da senha, ele verifica se e letra maiscula ou minuscula, ou numero
+    #identificado o tipo ele sera passado para uma funcao especifica que descobre o que aquele char e
     guess = ''
     for character in senha:
         if (character.isalpha() == True):
             if (character.islower() == True):
                 guess = guess + guess_letra(character)
             else:
+                #como o char e maiscula, o truque aqui foi conveter pra minuscula antes de passar pra funcao
+                #e converter para maiscula de volta quando recebe o guess
                 converte_letra = guess_letra (character.lower())
                 guess = guess + converte_letra.upper ()
         else:
