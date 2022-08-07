@@ -8,7 +8,6 @@ def le_senha ():
         if (senha.isalnum() == True and len(senha) == 4):
             print ('Senha valida! Podemos prosseguir')
             return senha
-            break
         else:
             print('Erro: Senha invalida. Tente novamente')
             continue

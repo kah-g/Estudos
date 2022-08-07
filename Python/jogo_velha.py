@@ -84,11 +84,11 @@ def verifica_win (grid, jogador):
             return True
         elif grid['top_l'] == grid['mid_l'] and grid['top_l'] == grid['low_l']:
             return True
-    elif grid['mid_m'] == jogador:
-        #nesse alem de verificar uma linha e uma coluna, vou verificar as duas diagonais
-        if grid['mid_m'] == grid['top_l'] and grid['mid_m'] == grid['low_r']:
+        elif grid['top_l'] == grid['mid_m'] and grid['top_l'] == grid['low_r']:
             return True
-        elif grid['mid_m'] == grid['top_r'] and grid['mid_m'] == grid['low_l']:
+    elif grid['mid_m'] == jogador:
+        #verificando posicoes a partir do meio
+        if grid['mid_m'] == grid['top_r'] and grid['mid_m'] == grid['low_l']:
             return True
         elif grid['mid_m'] == grid['top_m'] and grid['mid_m'] == grid['low_m']:
             return True
