@@ -1,1 +1,1 @@
-# Estudos independentes de programação
+# Estudos de linguagens
