@@ -1,5 +1,28 @@
 #include <stdio.h>
 
+int * divisor (int num) {
+    float resultado;
+    int divisores[15];
+    int i = 0;
+    while (1) {
+        resultado = num / 2;
+        printf("%d e %f\n", num, resultado);
+        if (resultado == 0) {
+            return divisores;
+        }
+        divisores[i] = num % 2;
+        //num deve receber resultado
+        i++;
+    }
+}
+
+int conversor (int num) {
+    int* pDivisores= divisor(num);
+    for (int i = 0; i < 15; i++) {
+        printf("%d\n", pDivisores[i]); 
+    }
+}
+
 void main () {
     //exercicio da aula 2 do curso de programacao I no ipv
 
@@ -29,7 +52,7 @@ void main () {
         printf("4.Solicite o nome do usuario como entrada e imprime uma mensagem de boas vindas que inclui o nome do usuario.\n");
         printf("Entre com o seu nome:\n");
         char nome[10];
-        scanf("%s", &nome);
+        scanf("%s", nome);
         printf("Seja bem vindo %s\n", nome);
         break;
 
@@ -206,6 +229,10 @@ void main () {
 
     case 18:
         printf("18.Converta um número inteiro em seu equivalente em binário.\n");
+        int num10;
+        printf("Entre com um numero intero:\n");
+        scanf("%d", &num10);
+        int num11 = conversor (num10);
         break;
     
     default:
