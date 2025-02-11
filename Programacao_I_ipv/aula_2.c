@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int * divisor (int num) {
     float resultado;
@@ -190,7 +191,7 @@ void main () {
         break;
 
     case 15:
-        printf("Exercicio 15 - Calcule o quadrado de um numero.\n");
+        printf("15. Calcule o quadrado de um numero.\n");
         int num7;
         printf("Entre com um numero intero:\n");
         scanf("%d", &num7);
@@ -198,7 +199,7 @@ void main () {
         break;
 
     case 16:
-        printf("16 - Calcule o valor absoluto de um numero.\n");
+        printf("16. Calcule o valor absoluto de um numero.\n");
         int num9;
         printf("Entre com um numero intero:\n");
         scanf("%d", &num9);
@@ -234,6 +235,40 @@ void main () {
         scanf("%d", &num10);
         int num11 = conversor (num10);
         break;
+
+    case 19:
+        printf("19. Determine a nota correspondente a uma pontuação bom base na escala fornecida.\n");
+        int num12;
+        printf("Digite uma pontuacao entre 0 e 100:\n");
+        scanf("%d", &num12);
+        char notaD[2];
+        if (num12 < 0 || num12 > 100) {
+            printf("Pontuacao invalida.\n");
+            break;
+        } else {
+            if (num12 >= 90 && num12 <= 100) {
+                strcpy (notaD, "A");
+            }
+            if (num12 >= 80 && num12 <= 89) {
+                strcpy (notaD, "B");
+            }
+            if (num12 >= 70 && num12 <= 79) {
+                strcpy (notaD, "C");
+            }
+            if (num12 >= 60 && num12 <= 69) {
+                strcpy (notaD, "D");
+            }
+            if (num12 >= 0 && num12 < 60) {
+                strcpy (notaD, "F");
+            }
+        }
+        printf("A nota recebida foi: %s.\n", notaD);
+        break;
+
+        case 20:
+            printf("Verifique se um caractere é uma vogal ou uma consoante.\n");
+            char letra[2];
+            scanf()
     
     default:
         printf("Nao corresponde a um exercicio.\n");
