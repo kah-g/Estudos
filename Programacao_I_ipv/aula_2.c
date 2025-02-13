@@ -24,6 +24,27 @@ int conversor (int num) {
     }
 }
 
+float calculadora (int op, float valor1, float valor2) {
+    switch (op)
+    {
+    case 1:
+        return valor1 + valor2;
+
+    case 2:
+        return valor1 - valor2;
+    
+    case 3:
+        return valor1 * valor2;
+
+    case 4:
+        return valor1 / valor2;
+    
+    default:
+        printf("ERRO\n");
+        break;
+    }
+}
+
 void main () {
     //exercicio da aula 2 do curso de programacao I no ipv
 
@@ -266,9 +287,38 @@ void main () {
         break;
 
         case 20:
-            printf("Verifique se um caractere é uma vogal ou uma consoante.\n");
+            printf("20.Verifique se um caractere é uma vogal ou uma consoante.\n");
             char letra[2];
-            scanf()
+            printf("Digite uma letra.\n");
+            scanf("%s", letra);
+            if ((*letra >= 'a' && *letra <= 'z') || (*letra >= 'A' && *letra <= 'Z')) { //confirming that its a letter
+                if (*letra == 'a' || *letra == 'A' || *letra == 'e' || *letra == 'E' || *letra == 'i' || *letra == 'I' || *letra == 'u' || *letra == 'U') {
+                    printf("O caractere fornecido é uma vogal.\n");
+                } else {
+                    printf("O caractere fornecido é uma consoante.\n");
+                }
+            } else {
+                printf("O caractere fornecido não é uma letra.\n");
+            }
+            break;
+
+            case 21:
+            printf("21. Crie uma calculadora que realize adicao, subtracao, multiplicacao e divisao.\n");
+            int op;
+            printf("Digite o numero da operacao que deseja realizar: 1-adicao, 2-subtracao, 3-multiplicacao, 4-divisao.\n");
+            scanf("%d", &op);
+            float valor1, valor2, resultado;
+            printf("Digite o primeiro valor da operacao.\n");
+            scanf("%f", &valor1);
+            printf("Digite o segundo valor da operacao.\n");
+            scanf("%f", &valor2);
+            resultado = calculadora (op, valor1, valor2);
+            printf("O resultado e: %.2f.\n", resultado);
+            break;
+
+            case 22:
+            printf("Calcule o dia da semana correspondente a uma data.\n");
+
     
     default:
         printf("Nao corresponde a um exercicio.\n");
